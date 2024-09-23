@@ -3,7 +3,6 @@ import zoominfoLogo from "@/assets/images/zoominfo-logo.png";
 import gorenLogo from "@/assets/images/goren.png";
 import CheckCircleIcon from "@/assets/icons/check-circle.svg";
 import ArrowUpRightIcon from "@/assets/icons/arrow-up-right.svg";
-import grainImage from "@/assets/images/grain.jpg";
 import SectionHeader from "@/components/section-header";
 import Card from "@/components/card";
 
@@ -80,7 +79,7 @@ export default function Projects() {
                         key={result.id}
                         className="flex items-center gap-2 text-sm text-white/50 md:text-base"
                       >
-                        <CheckCircleIcon className="size-5 md:size-6" />
+                        <CheckCircleIcon className="size-5 flex-shrink-0 md:size-6" />
                         <span>{result.title}</span>
                       </li>
                     ))}
