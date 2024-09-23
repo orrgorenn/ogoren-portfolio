@@ -57,10 +57,11 @@ export default function Projects() {
           subtitle={"Text Text Text Text Text Text Text Text Text"}
         />
         <div className="mt-8 flex flex-col gap-20 md:mt-20">
-          {portfolioProjects.map((project) => (
+          {portfolioProjects.map((project, index) => (
             <Card
               key={project.id}
-              className="px-8 pb-0 pt-8 md:px-10 md:pt-12 lg:px-20 lg:pt-16"
+              className="sticky px-8 pb-0 pt-8 md:px-10 md:pt-12 lg:px-20 lg:pt-16"
+              style={{ top: `calc(64px + ${index * 40}px)` }}
             >
               <div className="lg:grid lg:grid-cols-2 lg:gap-16">
                 <div className="lg:pb-16">
