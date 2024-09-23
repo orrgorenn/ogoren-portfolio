@@ -3,7 +3,7 @@ import grainImage from "@/assets/images/grain.jpg";
 
 export default function Contact() {
   return (
-    <div className="py-16 lg:py-24">
+    <section className="py-16 lg:py-24">
       <div className="container">
         <div className="relative z-0 overflow-hidden rounded-3xl bg-gradient-to-t from-emerald-300 to-sky-400 px-10 py-8 text-center text-gray-900 md:text-left">
           <div
@@ -29,6 +29,6 @@ export default function Contact() {
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 }
