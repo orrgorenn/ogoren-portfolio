@@ -14,7 +14,7 @@ export default function Header() {
           About
         </Link>
         <Link
-          href="#"
+          href="#contact"
           className="nav-item bg-white text-gray-900 hover:bg-white/70 hover:text-gray-900"
         >
           Contact
