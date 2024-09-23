@@ -1,24 +1,24 @@
 "use client";
 
-import React, { useRef } from "react";
+import { useRef } from "react";
 
-import SectionHeader from "@/components/section-header";
-import Card from "@/components/card";
-import Image from "next/image";
-import bookImage from "@/assets/images/book-cover.png";
-import JavaScriptIcon from "@/assets/icons/square-js.svg";
-import PythonIcon from "@/assets/icons/python.svg";
-import HTMLIcon from "@/assets/icons/html5.svg";
 import CSSIcon from "@/assets/icons/css3.svg";
-import ReactIcon from "@/assets/icons/react.svg";
 import GithubIcon from "@/assets/icons/github.svg";
+import HTMLIcon from "@/assets/icons/html5.svg";
+import PythonIcon from "@/assets/icons/python.svg";
+import ReactIcon from "@/assets/icons/react.svg";
+import JavaScriptIcon from "@/assets/icons/square-js.svg";
+import bookImage from "@/assets/images/book-cover.png";
 import mapImage from "@/assets/images/map.png";
 import smileMemoji from "@/assets/images/memoji-smile.png";
+import Card from "@/components/card";
 import CardHeader from "@/components/card-header";
+import SectionHeader from "@/components/section-header";
 import ToolboxItems, {
   ToolboxItem,
 } from "@/sections/about/_components/tool-box-items";
 import { motion } from "framer-motion";
+import Image from "next/image";
 
 type Hobby = {
   title: string;
@@ -91,7 +91,7 @@ export default function Index() {
   ];
 
   return (
-    <section className="py-16 lg:py-24">
+    <section className="py-16 lg:py-24" id="about">
       <div className="container">
         <SectionHeader
           header={"About Me"}

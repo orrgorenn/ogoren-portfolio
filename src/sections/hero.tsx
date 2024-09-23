@@ -1,3 +1,5 @@
+"use client";
+
 import ArrowDown from "@/assets/icons/arrow-down.svg";
 import SparkleIcon from "@/assets/icons/sparkle.svg";
 import StarIcon from "@/assets/icons/star.svg";
@@ -8,8 +10,11 @@ import Image from "next/image";
 
 export default function Hero() {
   return (
-    <div className="relative z-0 overflow-x-clip py-32 md:py-48 lg:py-60">
-      <div className="absolute inset-0 [mask-image:linear-gradient(to_bottom,transparent,black_10%,black_50%,transparent)]">
+    <div
+      className="relative z-0 overflow-x-clip py-32 md:py-48 lg:py-60"
+      id="home"
+    >
+      <div className="pointer-events-none absolute inset-0 [mask-image:linear-gradient(to_bottom,transparent,black_10%,black_50%,transparent)]">
         <div
           className="absolute inset-0 -z-30 opacity-5"
           style={{ backgroundImage: `url(${grainImage.src})` }}

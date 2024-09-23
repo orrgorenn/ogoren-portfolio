@@ -1,10 +1,10 @@
-import Image, { StaticImageData } from "next/image";
-import zoominfoLogo from "@/assets/images/zoominfo-logo.png";
-import gorenLogo from "@/assets/images/goren.png";
-import CheckCircleIcon from "@/assets/icons/check-circle.svg";
 import ArrowUpRightIcon from "@/assets/icons/arrow-up-right.svg";
-import SectionHeader from "@/components/section-header";
+import CheckCircleIcon from "@/assets/icons/check-circle.svg";
+import gorenLogo from "@/assets/images/goren.png";
+import zoominfoLogo from "@/assets/images/zoominfo-logo.png";
 import Card from "@/components/card";
+import SectionHeader from "@/components/section-header";
+import Image, { StaticImageData } from "next/image";
 
 type PortfolioProject = {
   id: number;
@@ -49,7 +49,7 @@ export default function Projects() {
   ];
 
   return (
-    <section className="pb-16 lg:py-24">
+    <section className="pb-16 lg:py-24" id="projects">
       <div className="container">
         <SectionHeader
           header={"What have I done?"}
