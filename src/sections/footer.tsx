@@ -9,11 +9,11 @@ export default function Footer() {
   const footerLinks: FooterLink[] = [
     {
       title: "X (Formerly Twitter)",
-      href: "#",
+      href: "https://x.com/ogoren_dev",
     },
     {
       title: "LinkedIn",
-      href: "#",
+      href: "https://www.linkedin.com/in/orrgoren/",
     },
   ];
 
