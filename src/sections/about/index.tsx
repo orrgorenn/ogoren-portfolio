@@ -1,4 +1,6 @@
-import React from "react";
+"use client";
+
+import React, { useRef } from "react";
 
 import SectionHeader from "@/components/section-header";
 import Card from "@/components/card";
@@ -16,6 +18,7 @@ import CardHeader from "@/components/card-header";
 import ToolboxItems, {
   ToolboxItem,
 } from "@/sections/about/_components/tool-box-items";
+import { motion } from "framer-motion";
 
 type Hobby = {
   title: string;
@@ -25,6 +28,8 @@ type Hobby = {
 };
 
 export default function Index() {
+  const constraintRef = useRef(null);
+
   const toolboxItems: ToolboxItem[] = [
     {
       title: "JavaScript",
@@ -111,11 +116,14 @@ export default function Index() {
                 title={"My Toolbox"}
                 description={"Explore the tech and tools I use on daily basis."}
               />
-              <ToolboxItems items={toolboxItems} />
+              <ToolboxItems
+                items={toolboxItems}
+                itemsWrapperClassName="animate-move-left"
+              />
               <ToolboxItems
                 className="mt-6"
                 items={toolboxItems}
-                itemsWrapperClassName="-translate-x-1/2"
+                itemsWrapperClassName="animate-move-right [animation-duration:15s]"
               />
             </Card>
           </div>
@@ -126,18 +134,20 @@ export default function Index() {
                 description={"Explore my interests and hobbies."}
                 className="px-6 py-6"
               />
-              <div className="relative flex-1">
+              <div className="relative flex-1" ref={constraintRef}>
                 {hobbies.map((hobby) => (
-                  <div
+                  <motion.div
                     key={hobby.title}
                     className="absolute inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-emerald-300 to-sky-400 px-6 py-1.5"
                     style={{ left: hobby.left, top: hobby.top }}
+                    drag
+                    dragConstraints={constraintRef}
                   >
                     <span className="text-sm font-medium text-gray-900">
                       {hobby.title}
                     </span>
                     <span>{hobby.emoji}</span>
-                  </div>
+                  </motion.div>
                 ))}
               </div>
             </Card>
@@ -147,7 +157,9 @@ export default function Index() {
                 alt={"map"}
                 className="h-full w-full object-cover object-left-top"
               />
-              <div className="absolute left-1/2 top-1/2 size-20 -translate-x-1/2 -translate-y-1/2 rounded-full bg-gradient-to-r from-emerald-300 to-sky-400 after:absolute after:inset-0 after:rounded-full after:outline after:outline-2 after:-outline-offset-2 after:outline-gray-900/30 after:content-['']">
+              <div className="absolute left-1/2 top-1/2 size-20 -translate-x-1/2 -translate-y-1/2 rounded-full after:absolute after:inset-0 after:rounded-full after:outline after:outline-2 after:-outline-offset-2 after:outline-gray-900/30 after:content-['']">
+                <div className="absolute inset-0 -z-20 animate-ping rounded-full bg-gradient-to-r from-emerald-300 to-sky-400 [animation-duration:3s]" />
+                <div className="absolute inset-0 -z-10 rounded-full bg-gradient-to-r from-emerald-300 to-sky-400" />
                 <Image
                   src={smileMemoji}
                   alt="smiling memoji"
