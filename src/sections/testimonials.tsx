@@ -37,7 +37,7 @@ export default function Testimonials() {
           subtitle={"Don't just take my word for it..."}
         />
         <div className="-my-4 mt-12 flex overflow-x-clip py-4 [mask-image:linear-gradient(to_right,transparent,black_10%,black_90%,transparent)] md:mt-24">
-          <div className="animate-move-left flex flex-none gap-8 [animation-duration:40s] hover:[animation-play-state:paused]">
+          <div className="animate-move-left flex flex-none gap-8 pr-8 [animation-duration:40s] hover:[animation-play-state:paused]">
             {[...new Array(2)].fill(0).map((_, idx) => (
               <Fragment key={idx}>
                 {testimonials.map((testimonial: Testimonial) => (
