@@ -40,7 +40,7 @@ export default function Testimonials() {
             {testimonials.map((testimonial: Testimonial) => (
               <Card
                 key={testimonial.name}
-                className="max-w-xs md:max-w-md md:p-8"
+                className="max-w-xs p-6 md:max-w-md md:p-8"
               >
                 <div className="flex items-center gap-4">
                   <div className="inline-flex size-14 flex-shrink-0 items-center justify-center rounded-full bg-gray-700">

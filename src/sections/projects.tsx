@@ -95,7 +95,7 @@ export default function Projects() {
                   <Image
                     src={project.logo}
                     alt={project.title}
-                    className="mx-auto -mb-6 mt-8 rounded-3xl md:mb-4 lg:absolute lg:-right-10 lg:-mb-4 lg:mt-0 lg:h-full lg:w-auto lg:max-w-none"
+                    className="mx-auto -mb-6 mt-8 rounded-3xl md:mb-4 md:size-36 lg:absolute lg:-right-10 lg:-mb-4 lg:mt-0 lg:h-full lg:w-auto lg:max-w-none"
                   />
                 </div>
               </div>
