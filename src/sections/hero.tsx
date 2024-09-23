@@ -18,26 +18,47 @@ export default function Hero() {
         <div className="hero-ring size-[850px]" />
         <div className="hero-ring size-[1050px]" />
         <div className="hero-ring size-[1250px]" />
-        <HeroOrbit size={800} rotation={-72}>
-          <StarIcon className="size-28 text-emerald-300" />
-        </HeroOrbit>
-        <HeroOrbit size={550} rotation={20}>
-          <StarIcon className="size-12 text-emerald-300" />
-        </HeroOrbit>
-        <HeroOrbit size={590} rotation={95}>
-          <StarIcon className="size-8 text-emerald-300" />
-        </HeroOrbit>
-        <HeroOrbit size={430} rotation={-15}>
+        <HeroOrbit size={430} rotation={-15} shouldOrbit orbitDuration={"30s"}>
           <SparkleIcon className="size-8 text-emerald-300/20" />
         </HeroOrbit>
-        <HeroOrbit size={440} rotation={75}>
+        <HeroOrbit size={440} rotation={75} shouldOrbit orbitDuration={"34s"}>
           <SparkleIcon className="size-5 text-emerald-300/20" />
         </HeroOrbit>
-        <HeroOrbit size={530} rotation={175}>
+        <HeroOrbit size={530} rotation={175} shouldOrbit orbitDuration={"38s"}>
           <SparkleIcon className="size-10 text-emerald-300/20" />
         </HeroOrbit>
-        <HeroOrbit size={710} rotation={140}>
+        <HeroOrbit
+          size={550}
+          rotation={20}
+          shouldOrbit
+          orbitDuration={"42s"}
+          shouldSpin
+          spinDuration={"10s"}
+        >
+          <StarIcon className="size-12 text-emerald-300" />
+        </HeroOrbit>
+        <HeroOrbit
+          size={590}
+          rotation={95}
+          shouldOrbit
+          orbitDuration={"46s"}
+          shouldSpin
+          spinDuration={"10s"}
+        >
+          <StarIcon className="size-8 text-emerald-300" />
+        </HeroOrbit>
+        <HeroOrbit size={710} rotation={140} shouldOrbit orbitDuration={"50s"}>
           <SparkleIcon className="size-14 text-emerald-300/20" />
+        </HeroOrbit>
+        <HeroOrbit
+          size={800}
+          rotation={-72}
+          shouldOrbit
+          orbitDuration={"54s"}
+          shouldSpin
+          spinDuration={"10s"}
+        >
+          <StarIcon className="size-28 text-emerald-300" />
         </HeroOrbit>
       </div>
       <div className="container">
@@ -48,7 +69,9 @@ export default function Hero() {
             className="size-[100px]"
           />
           <div className="inline-flex items-center gap-4 rounded-lg border border-gray-800 bg-gray-950 px-4 py-1.5">
-            <div className="size-2.5 rounded-full bg-red-500" />
+            <div className="relative size-2.5 rounded-full bg-red-500">
+              <div className="animate-ping-large absolute inset-0 rounded-full bg-red-500" />
+            </div>
             <div className="text-sm font-medium">Currently Hired</div>
           </div>
         </div>
