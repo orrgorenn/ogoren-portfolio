@@ -1,3 +1,5 @@
+import { Toaster } from "@/components/ui/sonner";
+import { ModalProvider } from "@/providers/modal-provider";
 import type { Metadata } from "next";
 import { Calistoga, Inter } from "next/font/google";
 import { twMerge } from "tailwind-merge";
@@ -29,7 +31,8 @@ export default function RootLayout({
           "bg-gray-900 font-sans text-white antialiased"
         )}
       >
-        {children}
+        <ModalProvider>{children}</ModalProvider>
+        <Toaster />
       </body>
     </html>
   );

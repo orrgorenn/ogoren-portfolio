@@ -1,7 +1,23 @@
+"use client";
+
 import ArrowUpRightIcon from "@/assets/icons/arrow-up-right.svg";
 import grainImage from "@/assets/images/grain.jpg";
+import ContactForm from "@/components/contact-form";
+import CustomModal from "@/components/custom-modal";
+import { useModal } from "@/providers/modal-provider";
 
 export default function Contact() {
+  const { setOpen } = useModal();
+
+  function handleButtonClick() {
+    console.log("Opening modal...");
+    setOpen(
+      <CustomModal>
+        <ContactForm />
+      </CustomModal>
+    );
+  }
+
   return (
     <section className="py-16 lg:py-24">
       <div className="container">
@@ -21,7 +37,10 @@ export default function Contact() {
               </p>
             </div>
             <div>
-              <button className="inline-flex h-12 w-max items-center gap-2 rounded-xl border border-gray-900 bg-gray-900 px-6 text-white">
+              <button
+                className="inline-flex h-12 w-max items-center gap-2 rounded-xl border border-gray-900 bg-gray-900 px-6 text-white"
+                onClick={handleButtonClick}
+              >
                 <span className="font-semibold">Contact Me</span>
                 <ArrowUpRightIcon className="size-4" />
               </button>

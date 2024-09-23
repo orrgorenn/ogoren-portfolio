@@ -5,10 +5,15 @@ import SparkleIcon from "@/assets/icons/sparkle.svg";
 import StarIcon from "@/assets/icons/star.svg";
 import grainImage from "@/assets/images/grain.jpg";
 import memojiImage from "@/assets/images/memoji-computer.png";
+import ContactForm from "@/components/contact-form";
+import CustomModal from "@/components/custom-modal";
 import HeroOrbit from "@/components/hero-orbit";
+import { useModal } from "@/providers/modal-provider";
 import Image from "next/image";
 
 export default function Hero() {
+  const { setOpen } = useModal();
+
   return (
     <div
       className="relative z-0 overflow-x-clip py-32 md:py-48 lg:py-60"
@@ -75,7 +80,7 @@ export default function Hero() {
           />
           <div className="inline-flex items-center gap-4 rounded-lg border border-gray-800 bg-gray-950 px-4 py-1.5">
             <div className="relative size-2.5 rounded-full bg-red-500">
-              <div className="animate-ping-large absolute inset-0 rounded-full bg-red-500" />
+              <div className="absolute inset-0 animate-ping-large rounded-full bg-red-500" />
             </div>
             <div className="text-sm font-medium">Currently Hired</div>
           </div>
@@ -90,13 +95,25 @@ export default function Hero() {
           </p>
         </div>
         <div className="mt-8 flex flex-col items-center justify-center gap-4 md:flex-row">
-          <button className="inline-flex h-12 w-[190px] items-center gap-2 rounded-xl border border-white/15 px-6">
+          <a
+            className="inline-flex h-12 w-[190px] items-center gap-2 rounded-xl border border-white/15 px-6"
+            href="#projects"
+          >
             <span className="font-semibold">Previous Work</span>
             <ArrowDown className="size-4" />
-          </button>
-          <button className="inline-flex h-12 w-[190px] items-center justify-center gap-2 rounded-xl border border-white bg-white px-6 text-gray-900">
+          </a>
+          <button
+            className="inline-flex h-12 w-[190px] items-center justify-center gap-2 rounded-xl border border-white bg-white px-6 text-gray-900"
+            onClick={() =>
+              setOpen(
+                <CustomModal>
+                  <ContactForm />
+                </CustomModal>
+              )
+            }
+          >
             <span className="text-2xl">👋</span>
-            <span className="font-semibold">Connect</span>
+            <span className="font-semibold">Contact</span>
           </button>
         </div>
       </div>
