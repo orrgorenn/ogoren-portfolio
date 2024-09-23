@@ -4,6 +4,7 @@ import Projects from "@/sections/projects";
 import Tape from "@/sections/tape";
 import Testimonials from "@/sections/testimonials";
 import About from "@/sections/about";
+import Contact from "@/sections/contact";
 
 export default function Home() {
   return (
@@ -14,6 +15,7 @@ export default function Home() {
       <Tape />
       <Testimonials />
       <About />
+      <Contact />
     </div>
   );
 }
