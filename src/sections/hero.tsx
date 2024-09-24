@@ -87,7 +87,7 @@ export default function Hero() {
         </div>
         <div className="mx-auto max-w-xl">
           <h1 className="mt-8 text-center font-serif text-3xl tracking-wide md:text-5xl">
-            Full-Stack Developer & Backend Orientation
+            Full-Stack Developer w/ Backend Orientation
           </h1>
           <p className="mt-4 text-center text-white/60 md:text-lg">
             A Software Developer with 10+ years of personal experience, and 3+

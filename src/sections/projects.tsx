@@ -1,6 +1,4 @@
-import ArrowUpRightIcon from "@/assets/icons/arrow-up-right.svg";
 import CheckCircleIcon from "@/assets/icons/check-circle.svg";
-import gorenLogo from "@/assets/images/goren.png";
 import zoominfoLogo from "@/assets/images/zoominfo-logo.png";
 import Card from "@/components/card";
 import SectionHeader from "@/components/section-header";
@@ -26,25 +24,22 @@ export default function Projects() {
       results: [
         {
           id: "1",
-          title: "As part of being Cost SLO - reduced cloud costs by ~15% YoY.",
+          title:
+            "Reduced cloud costs by ~20% by optimizing system performance and solving bottlenecks.",
+        },
+        {
+          id: "2",
+          title:
+            "Led the integration of 3rd-party services to enhance system capabilities, incl. implementing async data processing solutions.",
+        },
+        {
+          id: "3",
+          title:
+            "Utilize various database systems, including MySQL, MongoDB, DocumentDB & Redis.",
         },
       ],
       link: "https://zoominfo.com",
       logo: zoominfoLogo,
-    },
-    {
-      id: 2,
-      company: "goren.",
-      year: "03/2019 - Present",
-      title: "Founder & CEO",
-      results: [
-        {
-          id: "1",
-          title: "Managed 15+ social media accounts for customers.",
-        },
-      ],
-      link: "https://orrgoren.com",
-      logo: gorenLogo,
     },
   ];
 
@@ -54,7 +49,7 @@ export default function Projects() {
         <SectionHeader
           header={"What have I done?"}
           title={"Work Experience"}
-          subtitle={"Text Text Text Text Text Text Text Text Text"}
+          subtitle={"CODE. COFFEE. REPEAT."}
         />
         <div className="mt-8 flex flex-col gap-20 md:mt-20">
           {portfolioProjects.map((project, index) => (
@@ -78,19 +73,13 @@ export default function Projects() {
                     {project.results.map((result) => (
                       <li
                         key={result.id}
-                        className="flex items-center gap-2 text-sm text-white/50 md:text-base"
+                        className="flex justify-items-start gap-2 text-sm text-white/50 md:text-sm"
                       >
-                        <CheckCircleIcon className="size-5 flex-shrink-0 md:size-6" />
+                        <CheckCircleIcon className="size-5 flex-shrink-0 md:size-5" />
                         <span>{result.title}</span>
                       </li>
                     ))}
                   </ul>
-                  <a href={project.link}>
-                    <button className="mt-8 inline-flex h-12 w-full items-center justify-center gap-2 rounded-xl bg-white px-6 font-semibold text-gray-900 md:w-auto">
-                      <span>Go To Website</span>
-                      <ArrowUpRightIcon className="size-4" />
-                    </button>
-                  </a>
                 </div>
                 <div>
                   <Image

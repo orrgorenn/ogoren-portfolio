@@ -8,13 +8,15 @@ import Tape from "@/sections/tape";
 import Testimonials from "@/sections/testimonials";
 
 export default function Home() {
+  const showTestimonials = false;
+
   return (
     <div>
       <Header />
       <Hero />
       <Projects />
       <Tape />
-      <Testimonials />
+      {showTestimonials && <Testimonials />}
       <About />
       <Contact />
       <Footer />

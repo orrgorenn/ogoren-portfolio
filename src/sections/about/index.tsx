@@ -3,11 +3,11 @@
 import { useRef } from "react";
 
 import CSSIcon from "@/assets/icons/css3.svg";
-import GithubIcon from "@/assets/icons/github.svg";
 import HTMLIcon from "@/assets/icons/html5.svg";
+import NextJSIcon from "@/assets/icons/nextjs.svg";
+import NodeJSIcon from "@/assets/icons/nodejs.svg";
 import PythonIcon from "@/assets/icons/python.svg";
 import ReactIcon from "@/assets/icons/react.svg";
-import JavaScriptIcon from "@/assets/icons/square-js.svg";
 import bookImage from "@/assets/images/book-cover.png";
 import mapImage from "@/assets/images/map.png";
 import smileMemoji from "@/assets/images/memoji-smile.png";
@@ -32,8 +32,8 @@ export default function Index() {
 
   const toolboxItems: ToolboxItem[] = [
     {
-      title: "JavaScript",
-      iconType: JavaScriptIcon,
+      title: "Next.js",
+      iconType: NextJSIcon,
     },
     {
       title: "Python",
@@ -52,8 +52,8 @@ export default function Index() {
       iconType: ReactIcon,
     },
     {
-      title: "Github",
-      iconType: GithubIcon,
+      title: "NodeJS",
+      iconType: NodeJSIcon,
     },
   ];
 
